@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Poppins:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+header {
+    height: 100vh;
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+nav.navbar {
+    height: 22%;
+    width: 100%;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
+}
+
+nav.navbar a {
+    color: lightblue;
+    text-decoration: none;
+    transition: .4s;
+}
+
+nav.navbar a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(76, 186, 223);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .4s;
+}
+
+nav.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.content {
+    padding: 50px;
+}
+
+.content img {
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overlay-container {
+    height: 200px;
+    width: 375px;
+    margin: 30px 10px 0 0;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: .4s;
+    background-image: url("https://picsum.photos/400/240");
+    background-size: cover;
+    position: relative;
+}
+
+.overlay-container > .overlay {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #121212;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    position: absolute;
+    bottom: -999px;
+    /*transform: scaleY(0);
+    transform-origin: bottom left;*/
+    transition: .6s ease;
+}
+
+.overlay-container:hover > .overlay {
+    bottom: 0;
+    backdrop-filter: blur(2px);
+    /*transform: scaleY(1);*/
+}
+
+ol li {
+    font-size: 17px;
+    margin: 8px;
+    list-style-position: inside;
+}
